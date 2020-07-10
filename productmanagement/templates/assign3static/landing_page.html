@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block body_content %}
+    <div class="text-center">
+    </div>
+    <div>
+
+            <h2> Welcome </h2>
+            <div class="jumbotron">
+                <div class="content container">
+                    <div class="row">
+                        <div class="card" style="width: 18rem; float: left; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title">List Users</h5>
+                                <p class="card-text">List all Customers registered in the system.</p>
+                     <a href="{% url 'customer_list'%}" class="btn btn-primary">View Customer List</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem; float: left; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Add Customer</h5>
+                                <p class="card-text">Create new Customer.</p>
+<a href="{% url 'customer_create'%}" class="btn btn-primary">Add Customer List</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card" style="width: 18rem; float: left; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title">List Products</h5>
+                                <p class="card-text">List products available.</p>
+<a href="{% url 'product_list'%}" class="btn btn-primary">View Product List</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem; float: left; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Add Products</h5>
+                                <p class="card-text">Create a new Product.</p>
+<a href="{% url 'products_create'%}" class="btn btn-primary">Add product List</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="card" style="width: 18rem; float: left; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title">List Suppliers</h5>
+                                <p class="card-text">List Suppliers available.</p>
+<a href="{% url 'supplier_list'%}" class="btn btn-primary">View Supplier List</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem; float: left; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Add Suppliers</h5>
+                                <p class="card-text">Create a new Supplier</p>
+<a href="{% url 'suppliers_create'%}" class="btn btn-primary">Add Supplier </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                      <div class="row">
+                        <div class="card" style="width: 18rem; float: left; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title">List Countries</h5>
+                                <p class="card-text">List Countries available.</p>
+<a href="{% url 'country_list'%}" class="btn btn-primary">View Country List</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem; float: left; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Add Country</h5>
+                                <p class="card-text">Add a new Country</p>
+<a href="{% url 'country_create'%}" class="btn btn-primary">Add new Country</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+    </div>
+{% endblock body_content %}

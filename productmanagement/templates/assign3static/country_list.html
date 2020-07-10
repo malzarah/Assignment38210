@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}All Countries in the system{% endblock title %}
+{% block body_content %}
+    <h2>All Countries </h2>
+  {% for user in object_list %}
+      <div class="card">
+          <div class="Card-Header" style="background-color: #C4D6EC; padding-top: 2%; padding-bottom: 1%; padding-left:5px;">
+              <span class="font-weight-bold">{{ user.country_code}} </span>
+          </div>
+          <div class="card-body">
+            <span class="font-muted">Continent{{ user.continent_name }} </span>
+
+          </div>
+          <div class="card-footer">
+<a href="{% url 'country_edit' pk=user.id %}"><span class="btn btn-primary">Edit</span></a>
+          </div>
+
+      </div>
+  {% endfor %}
+{% endblock body_content %}

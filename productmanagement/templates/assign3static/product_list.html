@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}All Products in the system{% endblock title %}
+{% block body_content %}
+    <h2>All Products</h2>
+  {% for user in object_list %}
+      <div class="card">
+          <div class="Card-Header" style="background-color: #C4D6EC; padding-top: 2%; padding-bottom: 1%; padding-left:5px;">
+              <span class="font-weight-bold">{{ user.product_name}} </span>
+          </div>
+          <div class="card-body">
+            <span class="font-muted">Manufacturer: {{ user.product_manufacturer }} </span>
+            <br>
+            <span class="font-muted">Price: {{ user.product_price }}</span>
+            <br>
+              {% if user.product_available_status  %}
+            <span class="font-muted">Availablity: Yes </span>
+              {% endif%}
+          </div>
+          <div class="card-footer">
+<a href="{% url 'product_edit' pk=user.id %}"><span class="btn btn-primary">Edit</span></a>
+          </div>
+
+
+      </div>
+
+    <p> </p>
+{% endfor %}
+{% endblock body_content %}

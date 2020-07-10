@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block body_content %}
+    <h1>Edit User</h1>
+    <form style="padding: 15px; width: 75%; " action="" method="post">{% csrf_token %}{% bootstrap_form form %}
+    <br>
+    <button class="btn btn-info ml-2" type="submit">Update</button>
+    <button class="btn btn-info ml-2" onclick="javascript:history.back();">Cancel</button>
+</form>
+{% endblock body_content %}

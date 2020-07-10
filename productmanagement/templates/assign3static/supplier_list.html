@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}All Suppliers in the system{% endblock title %}
+{% block body_content %}
+    <h2>All Suppliers </h2>
+  {% for user in object_list %}
+      <div class="card">
+          <div class="Card-Header" style="background-color: #C4D6EC; padding-top: 2%; padding-bottom: 1%; padding-left:5px;">
+              <span class="font-weight-bold">{{ user.supplier_name}} </span>
+          </div>
+          <div class="card-body">
+
+            <span class="font-muted">Created: {{ user.supplier_created }}</span>
+            <br>
+            <span class="font-muted">Country_Code: {{ user.supplier_country_code_id }}</span>
+          </div>
+          <div class="card-footer">
+<a href="{% url 'supplier_edit' pk=user.id %}"><span class="btn btn-primary">Edit</span></a>
+          </div>
+
+      </div>
+  {% endfor %}
+{% endblock body_content %}

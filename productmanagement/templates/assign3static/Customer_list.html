@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}All Users in the system{% endblock title %}
+{% block body_content %}
+    <h2>All Customers </h2>
+  {% for user in object_list %}
+      <div class="card">
+          <div class="Card-Header" style="background-color: #C4D6EC; padding-top: 2%; padding-bottom: 1%; padding-left:5px;">
+              <span class="font-weight-bold">{{ user.first_name}} {{ user.last_name }}</span>
+          </div>
+          <div class="card-body">
+            <span class="font-muted">  First NameName {{ user.first_name }} </span>
+            <br>
+            <span class="font-muted">Last Name {{ user.last_name }}</span>
+            <br>
+            <span class="font-muted">City: {{ user.city }}</span>
+              <br>
+            <span class="font-muted">State: {{ user.state }}</span>
+              <br>
+            <span class="font-muted">Zip: {{ user.zip }}</span>
+
+              <br>
+            <span class="font-muted">Notes: {{ user.notes }}</span>
+
+          </div>
+          <div class="card-footer">
+ <a href="{% url 'customer_edit' pk=user.id %}"><span class="btn btn-primary">Edit</span></a>
+          </div>
+
+      </div>
+  {% endfor %}
+{% endblock body_content %}
